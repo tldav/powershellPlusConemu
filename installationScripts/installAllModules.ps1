@@ -6,5 +6,6 @@ if (-not (isAdmin)) {
 
 ./installPShellPrompt.ps1
 ./installOpenGradleTestReport.ps1
-./installGciColorShortcuts.ps1
+./installGciColor.ps1
+./installMiscCommands.ps1
 ./installStartRWEnvironment.ps1

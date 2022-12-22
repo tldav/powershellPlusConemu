@@ -1,5 +1,5 @@
 function Invoke-PrintTerminalColors {
-  [System.Enum]::GetValues("ConsoleColor") | ForEach-Object { Write-Host $_ -ForegroundColor $_}
+  [System.Enum]::GetValues("ConsoleColor") | ForEach-Object { Write-Host $_ -ForegroundColor $_ }
 }
 
 function Copy-WorkingDirectory {
@@ -13,7 +13,8 @@ function Set-LocationToClipboard {
   $target = Get-Clipboard
   if ($target -clike "C:\*" -and (Test-Path $target -ErrorAction SilentlyContinue)) {
     Set-Location $target
-  } else {
+  }
+  else {
     Write-host -ForegroundColor Cyan "`nDirectory not found`n"
   }
 }
@@ -52,6 +53,7 @@ function Invoke-GitPushUpstreamOrigin {
     git push -u origin $currentBranch
   }
 }
+# install gcm alias
 function Invoke-GitCommitM([string]$message) {
   git commit -m $message
 }
@@ -83,9 +85,7 @@ New-Alias -Name e -Value Invoke-InvokeItem
 New-Alias -Name gs -Value Invoke-GitStatus
 New-Alias -Name ga. -Value Invoke-GitAddAll
 New-Alias -Name gpl -Value Invoke-GitPull
-New-Alias -Name gp -Value Invoke-GitPush
 New-Alias -Name gpuo -Value Invoke-GitPushUpstreamOrigin
-New-Alias -Name gcm -Value Invoke-GitCommitM
 New-Alias -Name gcd -Value Invoke-GradleCleanDeployment
 New-Alias -Name gcdb -Value Invoke-GradleCleanDebug
 New-Alias -Name gcr -Value Invoke-GradleCleanRegression

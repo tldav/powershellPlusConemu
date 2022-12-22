@@ -14,23 +14,22 @@ function overrideGitAlias {
   $profileDir = $profile.substring(0, $profile.indexOf("\Microsoft.PowerShell_profile.ps1"))
   $module = "$profileDir\Modules\miscCommands\miscCommands.psm1"
 
-  $isGcmInstalled = Select-String -Path $module -Pattern "New-Alias -Name gcm -Value Invoke-GitCommitM"
+  $isGcmInstalled = Select-String -Path $module -Pattern "# install gcm alias"
 
-  $isGCMdefaultRemoved = Select-String -Path $profile -Pattern "Remove-Item alias:gcm -Force"
+  $isGCMdefaultRemoved = Select-String -Path $profile -Pattern "Set-Alias gcm Invoke-GitCommitM -option AllScope -Force"
 
   if ($isGcmInstalled -and -not $isGCMdefaultRemoved) {
     Add-Content $profile "`nif ([bool] (Get-Command -ErrorAction Ignore Invoke-GitCommitM)) {"
-    Add-Content $profile "`tRemove-Item alias:gcm -Force"
+    Add-Content $profile "`tSet-Alias gcm Invoke-GitCommitM -option AllScope -Force"
     Add-Content $profile "}`n"
   }
 
 
   $isGpiInstalled = Select-String -Path $module -Pattern "function Invoke-GitPush {"
-  $isGPIdefaultRemoved = Select-String -Path $profile -Pattern "Remove-Item alias:gp -Force"
-
+  $isGPIdefaultRemoved = Select-String -Path $profile -Pattern "Set-Alias gp Invoke-GitPush -option AllScope -Force"
   if ($isGpiInstalled -and -not $isGPIdefaultRemoved) {
     Add-Content $profile "`nif ([bool] (Get-Command -ErrorAction Ignore Invoke-GitPush)) {"
-    Add-Content $profile "`tRemove-Item alias:gp -Force"
+    Add-Content $profile "`tSet-Alias gp Invoke-GitPush -option AllScope -Force"
     Add-Content $profile "}`n"
   }
 }
