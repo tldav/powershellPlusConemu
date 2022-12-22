@@ -50,7 +50,7 @@ function designateConsoleGroups([string]$section) {
   }
 }
 
-function New-RWPEnvironment() {
+function Start-RWEnvironment() {
   $currentDir = Get-Location
   $isRWPRoot = (Test-Path -Path "$currentDir/application") -and (Test-Path -Path "$currentDir/service")
   if (-not $isRWPRoot) {
@@ -60,7 +60,7 @@ function New-RWPEnvironment() {
   designateConsoleGroups service
 }
 
-New-Alias -Name rwp -Value New-RWPEnvironment
+New-Alias -Name rwp -Value Start-RWEnvironment
 
 Export-ModuleMember *-* -Alias rwp
 

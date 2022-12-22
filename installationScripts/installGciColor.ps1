@@ -3,7 +3,8 @@ Import-Module "../validate/isAdmin.psm1"
 if (-not (isAdmin)) {
   exit
 }
-Import-Module "../write/installModule.psm1"
+
+Import-Module "../write/writeProfileReqs"
 
 $isGcicInstalled = [bool] (Get-Command -ErrorAction Ignore Get-ChildItemColor)
 
@@ -19,4 +20,4 @@ if (-not $isGcicInstalled) {
   Write-Host -ForegroundColor Cyan "`tAfter terminal restart, 'ls', 'dir', and 'gci' will print files and directories in color`n"
 }
 
-installModule "gciColorShortcuts"
+overrideGciAlias
