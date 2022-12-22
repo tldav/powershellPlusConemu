@@ -15,8 +15,8 @@ if (-not $isGcicInstalled) {
     Write-Host -ForegroundColor red "`n`tSomething went wrong.`n"
     exit
   }
-  installModule "gciColorShortcuts"
   Write-Host -ForegroundColor Cyan "`n`tGet-ChildItemColor installed successfully."
   Write-Host -ForegroundColor Cyan "`tAfter terminal restart, 'ls', 'dir', and 'gci' will print files and directories in color`n"
 }
 
+installModule "gciColorShortcuts"

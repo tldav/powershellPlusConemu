@@ -26,6 +26,4 @@ if (-not (isPathValid "C:\Program Files\ConEmu\ConEmu64.exe")) {
 }
 
 writeToFile "C:\Program Files\ConEmu\ConEmu.xml" "..\ConEmu.xml"
-
-############ INSTALL newRWPEnvironment MODULE ############
 installModule "startRWEnvironment"

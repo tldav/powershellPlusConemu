@@ -33,6 +33,9 @@ function Invoke-GitStatus {
 function Invoke-GitAddAll {
   git add .
 }
+function invoke-GitPull {
+  git pull
+}
 function Invoke-GitPush {
   git push
 }
@@ -85,6 +88,7 @@ New-Alias -Name e. -Value Invoke-ItemWorkingDirectory
 New-Alias -Name e -Value Invoke-InvokeItem
 New-Alias -Name gs -Value Invoke-GitStatus
 New-Alias -Name ga. -Value Invoke-GitAddAll
+New-Alias -Name gpl -Value Invoke-GitPull
 New-Alias -Name gp -Value Invoke-GitPush
 New-Alias -Name gpuo -Value Invoke-GitPushUpstreamOrigin
 New-Alias -Name gcm -Value Invoke-GitCommitM
