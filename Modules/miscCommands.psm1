@@ -1,24 +1,23 @@
-# Function
 function Invoke-PrintTerminalColors {
-  [System.Enum]::GetValues('ConsoleColor') |
-  ForEach-Object { Write-Host $_ -ForegroundColor $_ }
+  [System.Enum]::GetValues("ConsoleColor") | ForEach-Object { Write-Host $_ -ForegroundColor $_}
 }
+
+function Copy-WorkingDirectory {
+  $path = (Get-Location).Path
+  $path | Set-Clipboard
+  "`nCopied path to clipboard:`n"
+  "$path`n"
+}
+
 function Set-LocationToClipboard {
   $target = Get-Clipboard
   if ($target -clike "C:\*" -and (Test-Path $target -ErrorAction SilentlyContinue)) {
     Set-Location $target
-  }
-  else {
-    Write-Host -ForegroundColor Cyan "`nDirectory not found ¯\_(ツ)_/¯`n"
+  } else {
+    Write-host -ForegroundColor Cyan "`nDirectory not found`n"
   }
 }
-function Copy-WorkingDirectory {
-  $path = (Get-Location).Path
-  $path | Set-Clipboard
-  "`nCopied path to clipboard:"
-  $path
-  ""
-}
+
 function Invoke-ItemWorkingDirectory {
   Invoke-Item .
 }
@@ -33,7 +32,7 @@ function Invoke-GitStatus {
 function Invoke-GitAddAll {
   git add .
 }
-function invoke-GitPull {
+function Invoke-GitPull {
   git pull
 }
 function Invoke-GitPush {
@@ -73,11 +72,6 @@ function Invoke-GradleCleanTest {
   ./gradlew clean test
 }
 
-# Set-Alias ls Get-ChildItemColor -option AllScope -Force
-# Set-Alias dir Get-ChildItemColor -option AllScope -Force
-# Set-Alias gci Get-ChildItemColor -option AllScope -Force
-Remove-Item alias:gp -Force # remove default alias for Get-ItemProperty
-Remove-Item alias:gcm -Force # remove default alias for Get-Command
 
 # Alias
 New-Alias -Name touch -Value New-Item
