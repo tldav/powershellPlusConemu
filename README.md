@@ -2,6 +2,8 @@
 
 A collection of helpful powershell modules and shortcuts, as well as conemu installation and configuration.
 
+<span style="color:red">Please review [RWE_README.md](./RWE_README.md) before attempting to use that module.</span>
+
 ## Installation
 
 1. Clone the [repository](https://github.com/tldav/powershellPlusConemu)
