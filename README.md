@@ -1,11 +1,11 @@
 # PowerShell + ConEmu
 
-A collection of helpful powershell modules and shorcuts, as well as conemu installation and configuration.
+A collection of helpful powershell modules and shortcuts, as well as conemu installation and configuration.
 
 ## Installation
 
 1. Clone the [repository](https://github.com/tldav/powershellPlusConemu)
-2. Open PowerShell terminal with admin/elevated privelages
+2. Open PowerShell terminal with admin/elevated privileges
 3. Navigate to powershellPlusConemu/installationScripts and run installAllModules.ps1
 4. Read over the information prompt
 5. Enter `y` to continue or `n` to exit
@@ -26,7 +26,7 @@ Adds color to directories and files when using `gci`, `ls`, etc.
 
 #### PowerShell Prompt
 
-Customizes the PowerShell prompt to contain more information and formats it similar to bash.
+Customizes the PowerShell prompt to contain more information and formats it similarly to bash.
 
 ## Shortcuts and Commands
 
