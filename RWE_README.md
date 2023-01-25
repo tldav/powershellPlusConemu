@@ -12,7 +12,7 @@ You can navigate between console tab groups using `ctrl + tab` and navigate betw
 This module makes the following assumptions:
 
 1. You're in the root directory of the project you want to start.
-2. All services are started using the same command. By default, it assumes `npm start` but can be edited to suit other tools
+2. All services are started using the same command. By default, it assumes `npm start` but can be edited to suit other tools and commands e.g., `mvn spring-boot:run`
 3. Your project follows a particular structure:
   * root/application/app1, root/application/app2, etc.
   * root/service/service1, root/service/service2, etc.
