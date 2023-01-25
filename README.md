@@ -2,7 +2,7 @@
 
 A collection of helpful powershell modules and shortcuts, as well as conemu installation and configuration.
 
-<span style="color:red">Please review [RWE_README.md](./RWE_README.md) before attempting to use that module.</span>
+<span style="color:red">**Please review [RWE_README.md](./RWE_README.md) before attempting to use that module.**</span>
 
 ## Installation
 
@@ -14,7 +14,7 @@ A collection of helpful powershell modules and shortcuts, as well as conemu inst
 
 Any module can be installed independently by running the respective ps1 file in the installationScripts directory.
 
-The first time you open ConEmu, it is recommended that you do NOT do so with elevated permissions. It is also recommended that you change the Minimize/Restore hotkey in Settings > General to something that will not interfere with other software or system shortcuts.
+**The first time you open ConEmu, it is recommended that you do NOT do so with elevated permissions. It is also recommended that you change the Minimize/Restore hotkey in Settings > General to something that will not interfere with other software or system shortcuts.**
 
 ## Modules
 
