@@ -50,6 +50,12 @@ Opens directory in file explorer. This is a shortcut for `explorer .`, `explorer
 Command: `printColors`\
 Lists all colors used by current PowerShell color scheme. This is mostly helpful for editing custom themes.
 
+Command: `chromeDriverStopAll`\
+Kills all running instances of chromedriver.exe. This is especially helpful when chromedriver requires an update but cannot be deleted/replaced due to running instances.
+
+Command: `chromeStopAll`\
+While using chromedriver, many instances of chrome itself will start running. Using this can free up memory for those who use a browser other than chrome.
+
 #### Gradle Commands
 
 The following commands must be used in the root folder of a gradle project. You'll know if you're in the right place if the directory includes files named gradlew, gradlew.bat, etc.

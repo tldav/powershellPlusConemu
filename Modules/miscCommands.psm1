@@ -26,6 +26,13 @@ function Invoke-InvokeItem([string]$dir) {
   Invoke-Item $dir
 }
 
+function Stop-ChromeDriverExeAll {
+  taskkill /IM chromedriver.exe /F
+}
+function Stop-ChromeExeAll {
+  taskkill /IM chrome.exe /F
+}
+
 ## Git
 function Invoke-GitStatus {
   git status
@@ -74,6 +81,16 @@ function Invoke-GradleCleanTest {
   ./gradlew clean test
 }
 
+## Spring boot w/ maven
+function Start-MavenSpringBoot {
+  mvn spring-boot:run
+}
+
+## Intellij
+function Open-DirectoryIntellij([string]$dir) {
+  idea64.exe $dir
+}
+
 
 # Alias
 New-Alias -Name touch -Value New-Item
@@ -82,6 +99,8 @@ New-Alias -Name cdp -Value Set-LocationToClipboard
 New-Alias -Name cwd -Value Copy-WorkingDirectory
 New-Alias -Name e. -Value Invoke-ItemWorkingDirectory
 New-Alias -Name e -Value Invoke-InvokeItem
+New-Alias -Name chromeDriverStopAll -Value Stop-ChromeDriverExeAll
+New-Alias -Name chromeStopAll -Value Stop-ChromeExeAll
 New-Alias -Name gs -Value Invoke-GitStatus
 New-Alias -Name ga. -Value Invoke-GitAddAll
 New-Alias -Name gpl -Value Invoke-GitPull
@@ -90,6 +109,8 @@ New-Alias -Name gcd -Value Invoke-GradleCleanDeployment
 New-Alias -Name gcdb -Value Invoke-GradleCleanDebug
 New-Alias -Name gcr -Value Invoke-GradleCleanRegression
 New-Alias -Name gct -Value Invoke-GradleCleanTest
+New-Alias -Name sbr -Value Start-MavenSpringBoot
+New-Alias -Name ij -Value Open-DirectoryIntellij
 
 
 Export-ModuleMember *-* -Alias *

@@ -13,7 +13,7 @@ This module makes the following assumptions:
 
 1. You're in the root directory of the project you want to start.
 2. All services are started using the same command. By default, it assumes `npm start` but can be edited to suit other tools
-3. Your project follows a particular structure
+3. Your project follows a particular structure:
   * root/application/app1, root/application/app2, etc.
   * root/service/service1, root/service/service2, etc.
 
