@@ -34,52 +34,46 @@ Customizes the PowerShell prompt to contain more information and formats it simi
 
 #### Misc Commands
 
-Command: `ij <directory>`\
-Open directory in intellij via terminal, similar to using `code <directory>` for vscode.
+`sbr` &rarr; Alias for `mvn spring-boot:run`&nbsp;\
+`cwd` &rarr; Copy working directory to clipboard\
+`cdp` &rarr; Navigate to directory set to clipboard
 
-Command: `sbr`\
-Alias for `mvn spring-boot:run`
+`ij <directory>` &rarr; Open directory in intellij\
+ &nbsp;&nbsp;&nbsp;&nbsp;_Similar to using `code <directory>` for vscode._
 
-Command: `cwd`\
-Copies working directory from terminal to clipboard
+`e <directory>` &rarr; Opens directory in file explorer\
+&nbsp;&nbsp;&nbsp;&nbsp;_Shortcut for `explorer .`, `explorer directory/directory`, `ii .`, etc._
 
-Command: `cdp`\
-Navigates to directory currently set to clipboard
+`printColors` &rarr; List colors for current PowerShell theme\
+&nbsp;&nbsp;&nbsp;&nbsp;_Helpful for making/editing custom themes._
 
-Command: `e <directory>`\
-Opens directory in file explorer. This is a shortcut for `explorer .`, `explorer directory/directory`, `ii .`, etc.
+`chromeDriverStopAll` &rarr; Kill all instances of chromedriver.exe\
+&nbsp;&nbsp;&nbsp;&nbsp;_Especially helpful when chromedriver requires an update but cannot be deleted/replaced due to running instances._
 
-Command: `printColors`\
-Lists all colors used by current PowerShell color scheme. This is mostly helpful for editing custom themes.
-
-Command: `chromeDriverStopAll`\
-Kills all running instances of chromedriver.exe. This is especially helpful when chromedriver requires an update but cannot be deleted/replaced due to running instances.
-
-Command: `chromeStopAll`\
-While using chromedriver, many instances of chrome itself will start running. Using this can free up memory for those who use a browser other than chrome.
+`chromeStopAll` &rarr; Kill all instances of chrome.exe\
+&nbsp;&nbsp;&nbsp;&nbsp;_While using chromedriver, many instances of chrome itself will start running. This can be used to lower memory use for those who do not use chrome as their primary browser._
 
 #### Gradle Commands
 
 The following commands must be used in the root folder of a gradle project. You'll know if you're in the right place if the directory includes files named gradlew, gradlew.bat, etc.
 
-gradle clean deployment: `gcd`\
-gradle clean debug: `gcdb`\
-gradle clean regression: `gcr`\
-gradle clean smoke: `gcs`\
-gradle clean test: `gct`
+`gcd` &rarr; gradle clean deployment\
+`gcdb` &rarr; gradle clean debug\
+`gcr` &rarr; gradle clean regression\
+`gcs` &rarr; gradle clean smoke\
+`gct` &rarr; gradle clean test
 
-open gradle test results: `report`
-
-If you're using `clean` when running gradle tests, `report` will work by default. If you are not using `clean`, you will need to pass the test suite results you would like to view as a parameter `report deployment`, `report debug`, etc.
+`report` &rarr; open gradle test results\
+&nbsp;&nbsp;&nbsp;&nbsp;_If you're using `clean` when running gradle tests, `report` will work by default. If you are not using `clean`, you will need to pass the test suite results you would like to view as a parameter `report deployment`, `report debug`, etc._
 
 #### Git Commands
 
-git status: `gs`\
-git push: `gp`\
-git pull: `gpl`
+`gs` &rarr; git status\
+`gp` &rarr; git push\
+`gpl` &rarr; git pull
 
-git commit -m: `gcm`\
-Type the message after in quotation marks e.g., gcm "this is a commit message"
+`gcm` &rarr; git commit -m\
+&nbsp;&nbsp;&nbsp;&nbsp;_Type the message after in quotation marks e.g., gcm "this is a commit message"_
 
-git add . : `ga.`\
-This only works for the current directory and lower. I.e., cannot append ../../ to navigate upward and add from there.
+`ga.` &rarr; git add .\
+&nbsp;&nbsp;&nbsp;&nbsp;_Only works for the current directory and lower. I.e., cannot append ../../ to navigate upward and add from there._
