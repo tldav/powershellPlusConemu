@@ -14,7 +14,17 @@ A collection of helpful powershell modules and shortcuts, as well as conemu inst
 
 Any module can be installed independently by running the respective ps1 file in the installationScripts directory.
 
-**The first time you open ConEmu, it is recommended that you do NOT do so with elevated permissions. It is also recommended that you change the Minimize/Restore hotkey in Settings > General to something that will not interfere with other software or system shortcuts.**
+## ConEmu
+
+**The first time you open ConEmu, it is recommended that you do NOT do so with elevated permissions. It is also recommended that you change the Minimize/Restore hotkey in Settings > General to something you prefer and will not interfere with other software or system shortcuts.**
+
+`ctrl + alt + j` &rarr; Minimize/Restore ConEmu window\
+`ctrl + t` &rarr; New **GENERAL** console tab\
+`ctrl + tab` &rarr; Navigate to next tab\
+`alt + up` &rarr; Focus console above\
+`alt + down` &rarr; Focus console below\
+`ctrl + w` &rarr; Close active console\
+`ctrl + alt + g` &rarr; Close active console group
 
 ## Modules
 
@@ -38,11 +48,15 @@ Customizes the PowerShell prompt to contain more information and formats it simi
 `cwd` &rarr; Copy working directory to clipboard\
 `cdp` &rarr; Navigate to directory set to clipboard
 
-`ij <directory>` &rarr; Open directory in intellij\
- &nbsp;&nbsp;&nbsp;&nbsp;_Similar to using `code <directory>` for vscode._
+`ij <directory>` &rarr; Open directory in Intellij\
+ &nbsp;&nbsp;&nbsp;&nbsp;_Similar to using `code <directory>` for vscode.\
+ **This currently requires adding an env variable for Intellij.**_
 
 `e <directory>` &rarr; Opens directory in file explorer\
 &nbsp;&nbsp;&nbsp;&nbsp;_Shortcut for `explorer .`, `explorer directory/directory`, `ii .`, etc._
+
+`e.` &rarr; Opens current directory in file explorer\
+&nbsp;&nbsp;&nbsp;&nbsp;_(No space) Very lazy shorthand for `e .`_
 
 `printColors` &rarr; List colors for current PowerShell theme\
 &nbsp;&nbsp;&nbsp;&nbsp;_Helpful for making/editing custom themes._
@@ -64,7 +78,7 @@ The following commands must be used in the root folder of a gradle project. You'
 `gct` &rarr; gradle clean test
 
 `report` &rarr; open gradle test results\
-&nbsp;&nbsp;&nbsp;&nbsp;_If you're using `clean` when running gradle tests, `report` will work by default. If you are not using `clean`, you will need to pass the test suite results you would like to view as a parameter `report deployment`, `report debug`, etc._
+&nbsp;&nbsp;&nbsp;&nbsp;_If you're using `clean` when running gradle tests, `report` will work by default. If you are not using `clean`, you will need to pass the test suite as a parameter `report deployment`, `report debug`, etc._
 
 #### Git Commands
 
