@@ -1,6 +1,6 @@
 # PowerShell + ConEmu
 
-A collection of helpful powershell modules and shortcuts, as well as conemu installation and configuration.
+A collection of helpful PowerShell modules and shortcuts, as well as conemu installation and configuration.
 
 <span style="color:red">**Please review [RWE_README.md](./RWE_README.md) before attempting to use that module.**</span>
 
@@ -16,7 +16,9 @@ Any module can be installed independently by running the respective ps1 file in 
 
 ## ConEmu
 
-**The first time you open ConEmu, it is recommended that you do NOT do so with elevated permissions. It is also recommended that you change the Minimize/Restore hotkey in Settings > General to something you prefer and will not interfere with other software or system shortcuts.**
+**For the first time, open ConEmu regularly, WITHOUT elevated permissions**
+
+**After opening ConEmu for the first time, go to Settings > Startup > Tasks. Select "Add/refresh default tasks..." then "Refresh default tasks" when prompted.**
 
 `ctrl + alt + j` &rarr; Minimize/Restore ConEmu window\
 `ctrl + t` &rarr; New **GENERAL** console tab\
@@ -65,7 +67,7 @@ Customizes the PowerShell prompt to contain more information and formats it simi
 &nbsp;&nbsp;&nbsp;&nbsp;_Especially helpful when chromedriver requires an update but cannot be deleted/replaced due to running instances._
 
 `chromeStopAll` &rarr; Kill all instances of chrome.exe\
-&nbsp;&nbsp;&nbsp;&nbsp;_While using chromedriver, many instances of chrome itself will start running. This can be used to lower memory use for those who do not use chrome as their primary browser._
+&nbsp;&nbsp;&nbsp;&nbsp;_While using chromedriver, many instances of chrome itself may start. This can be used to lower memory use for those who do not use chrome as their primary browser._
 
 #### Gradle Commands
 
@@ -90,4 +92,4 @@ The following commands must be used in the root folder of a gradle project. You'
 &nbsp;&nbsp;&nbsp;&nbsp;_Type the message after in quotation marks e.g., gcm "this is a commit message"_
 
 `ga.` &rarr; git add .\
-&nbsp;&nbsp;&nbsp;&nbsp;_Only works for the current directory and lower. I.e., cannot append ../../ to navigate upward and add from there._
+&nbsp;&nbsp;&nbsp;&nbsp;_Only works for the current directory and lower. I.e., cannot append `../../` to navigate upward and add from there._
