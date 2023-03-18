@@ -9,3 +9,4 @@ if (-not (isAdmin)) {
 ./installGciColor.ps1
 ./installMiscCommands.ps1
 ./installStartRWEnvironment.ps1
+./installPruneGitBranches.ps1
