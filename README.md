@@ -2,7 +2,7 @@
 
 A collection of helpful PowerShell modules and shortcuts, as well as conemu installation and configuration.
 
-<span style="color:red">**Please review [RWE_README.md](./RWE_README.md) before attempting to use that module.**</span>
+<span style="color:red">**Please review [RWE_README.md](./RWE_README.md) before installing that module.**</span>
 
 ## Installation
 
@@ -52,7 +52,7 @@ Customizes the PowerShell prompt to contain more information and formats it simi
 
 `ij <directory>` &rarr; Open directory in Intellij\
  &nbsp;&nbsp;&nbsp;&nbsp;_Similar to using `code <directory>` for vscode.\
- **This currently requires adding an env variable for Intellij.**_
+ **This currently requires adding an env variable if Intellij was installed manually.**_
 
 `e <directory>` &rarr; Opens directory in file explorer\
 &nbsp;&nbsp;&nbsp;&nbsp;_Shortcut for `explorer .`, `explorer directory/directory`, `ii .`, etc._
@@ -93,3 +93,6 @@ The following commands must be used in the root folder of a gradle project. You'
 
 `ga.` &rarr; git add .\
 &nbsp;&nbsp;&nbsp;&nbsp;_Only works for the current directory and lower. I.e., cannot append `../../` to navigate upward and add from there._
+
+`gitPrune` &rarr; git remote prune origin (sort of)\
+&nbsp;&nbsp;&nbsp;&nbsp;_Contributed by: [Donavyn Haley](https://github.com/DonavynHaley). Deletes local branches that lack a remote equivalent. Will not remove common default branches, such as develop or main._

@@ -1,3 +1,5 @@
+# Contributed by: Donavyn Haley -> https://github.com/DonavynHaley
+
 function Invoke-PruneGitBranches {
   Write-Host "Pruning Remote..." -ForegroundColor Green
 
