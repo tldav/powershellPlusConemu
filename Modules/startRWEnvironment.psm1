@@ -22,9 +22,18 @@ function UTConsole([string]$groupName, [string]$fullPath) {
 }
 
 function serverConsole([string]$groupName, [string]$fullPath) {
-  $sourceExists = Test-Path -Path "$fullPath/source"
+  $sourcePath = "$fullPath/source"
+  $sourceExists = Test-Path -Path $sourcePath
+
   if ($sourceExists) {
-    powershell -NoExit -new_console:t:"$groupName-SRV" -new_console:P:"gruvbox-dark" -new_console:sV -new_console:d:"$fullPath\source" -c "npm start" -n
+    $startCommand = ""
+    if (Test-Path -Path "$sourcePath/mvnw.cmd") {
+      $startCommand = "./mvnw spring-boot:run"
+    } else {
+      $startCommand = "npm start"
+    }
+
+    powershell -NoExit -new_console:t:"$groupName-SRV" -new_console:P:"gruvbox-dark" -new_console:sV -new_console:d:$sourcePath -c $startCommand
   }
 }
 
