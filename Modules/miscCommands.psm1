@@ -83,12 +83,17 @@ function Invoke-GradleCleanTest {
 
 ## Spring boot w/ maven
 function Start-MavenSpringBoot {
-  mvn spring-boot:run
+  ./mvnw spring-boot:run
 }
 
 ## Intellij
 function Open-DirectoryIntellij([string]$dir) {
   idea64.exe $dir
+}
+
+## MySQL
+function Invoke-MySQLRootUser {
+  powershell -new_console:t:"MYSQL" -new_console:P:"material-sublime-darker" -c "mysql -u root -p"
 }
 
 
@@ -111,6 +116,7 @@ New-Alias -Name gcr -Value Invoke-GradleCleanRegression
 New-Alias -Name gct -Value Invoke-GradleCleanTest
 New-Alias -Name sbr -Value Start-MavenSpringBoot
 New-Alias -Name ij -Value Open-DirectoryIntellij
+New-Alias -Name rootMySQL -Value Invoke-MySQLRootUser
 
 
 Export-ModuleMember *-* -Alias *
