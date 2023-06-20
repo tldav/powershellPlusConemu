@@ -40,6 +40,9 @@ function Invoke-GitStatus {
 function Invoke-GitAddAll {
   git add .
 }
+function Invoke-GitAddRelative($relativePath) {
+  git add $relativePath
+}
 function Invoke-GitPull {
   git pull
 }
@@ -96,7 +99,6 @@ function Invoke-MySQLRootUser {
   powershell -new_console:t:"MYSQL" -new_console:P:"material-sublime-darker" -c "mysql -u root -p"
 }
 
-
 # Alias
 New-Alias -Name touch -Value New-Item
 New-Alias -Name printColors -Value Invoke-PrintTerminalColors
@@ -108,10 +110,12 @@ New-Alias -Name chromeDriverStopAll -Value Stop-ChromeDriverExeAll
 New-Alias -Name chromeStopAll -Value Stop-ChromeExeAll
 New-Alias -Name gs -Value Invoke-GitStatus
 New-Alias -Name ga. -Value Invoke-GitAddAll
+New-Alias -Name ga -Value Invoke-GitAddRelative
 New-Alias -Name gpl -Value Invoke-GitPull
 New-Alias -Name gpuo -Value Invoke-GitPushUpstreamOrigin
 New-Alias -Name gcd -Value Invoke-GradleCleanDeployment
 New-Alias -Name gcdb -Value Invoke-GradleCleanDebug
+New-Alias -Name gcbug -Value Invoke-GradleCleanDebug # <- some people use this for some reason ¯\_(ツ)_/¯
 New-Alias -Name gcr -Value Invoke-GradleCleanRegression
 New-Alias -Name gct -Value Invoke-GradleCleanTest
 New-Alias -Name sbr -Value Start-MavenSpringBoot
