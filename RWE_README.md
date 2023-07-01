@@ -13,8 +13,8 @@ This module makes the following assumptions:
 1. You're in the root directory of the project you want to start.
 2. All servers are started using either `npm start` or `mvn spring-boot:run`. The server run command can be modified in startRWEnvironment.psm1
 3. Your project follows a specific directory structure:
-  * root/application/app1, root/application/app2, etc.
-  * root/service/service1, root/service/service2, etc.
-  * a console group will be opened for ALL directories under application and service.
+   * root/application/app1, root/application/app2, etc.
+   * root/service/service1, root/service/service2, etc.
+   * a console group will be opened for ALL directories under application and service.
 
 ![Start Real World Environment Sample GIF](./rwp_sample.gif)
